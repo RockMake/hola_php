@@ -13,8 +13,16 @@
     $age = 20;
     $height = 1.80;
     $isStudent = true;
-
     $output = "hola mi nombre es $name, tengo $age años, mido $height y soy estudiante $isStudent";
+    $outputage = match (true) {
+        $age < 18 => "eres menor de edad",
+        $age >= 18 && $age < 65 => "eres adulto",
+        $age >= 65 => "eres jubilado"
+    };
+
+
+
+
     ?>
     <h1>
         <?= $output; ?>
